@@ -4,6 +4,10 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>install_newtonsoft</RootNamespace>
+    <Authors>Yoav Klein</Authors>
+    <Company>Rafael</Company>
+    <PackageId>MyPackage</PackageId>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
