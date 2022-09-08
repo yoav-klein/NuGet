@@ -13,7 +13,7 @@ function Pack() {
 	../../nuget.exe pack .
 }
 
-function Push() {
+function Push-Package() {
        $APIKEY=$(cat apikey)
 	../../nuget.exe push -Source "py" -Apikey $APIKEY using-nuget-cli.2.4.1.nupkg
 }
