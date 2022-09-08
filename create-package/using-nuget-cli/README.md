@@ -8,6 +8,9 @@ For your help, source the `Functions.ps1` file so that you'll have useful functi
 ## Build the project
 First, build the project with MSBuild. Use `Build-Project` function for this.
 
+#### Set the version
+Before you build, set the desired version in the `Properties/AssemblyInfo.cs`.
+
 ## Create the package
 Basically, the flow is as such: We need to generate a `.nuspec` file, which contains
 metadata about the package. Then, we run `nuget pack` to pack the package.
@@ -31,8 +34,6 @@ When packaging, those values will be retrieved from the project.
 However, there are some tokens that aren't replaced, such as Author, Descrition, etc. So you need to take care of them manually.
 Edit the nuspec file as you want, and run
 
-#### Set the version
-Set the desired version in the `Properties/AssemblyInfo.cs` file before you pack.
 
 ### Build the package
 
