@@ -36,14 +36,20 @@ $ dotnet nuget push <.nupkg> -s nuget.org -k $(cat apikey)
 ```
 
 ### Publish to Azure Artifacts
-We have a `nuget.config` file in the root of this repository. Nuget will use this file since Nuget
-uses `nuget.config` files it meets in the way up to the root directory of the drive.
 
-In this nuget.config we have the "azure" source configured. In order to push to Azure Artifacts, run this command:
+We'll use our feed in the NuGet project in Azure DevOps.
+Recall, our `nuget.config` defines a source named `azure` which points to this feed.
+
+In order to authenticate, you'll need to add the username (any string will do I think)
+and your Azure DevOps PAT as credentials for this source. Don't commit it to Git though.
+
+```
+$ dotnet nuget update source azure -u yoavklein25 -p <PAT> (in Linux: --store-passowrd-in-clear-text)
+```
+
+Now you can push the package to the feed
 ```
 $ dotnet nuget push <.nupkg> -s azure -k az 
 ```
 
 the `az` given to `-k` is arbitrary, any string will do.
-
-NOT SO CLEAR: how authentication occurs?
