@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <PackageId>YoavLogger</PackageId>
-    <Version>1.3.4</Version>
+    <TargetFramework>net5.0</TargetFramework>
+    <PackageId>Yoav.Core.Logger</PackageId>
+    <Version>1.3.6</Version>
     <Authors>Yoav Klein</Authors>
     <Company>Rafael</Company>
   </PropertyGroup>
