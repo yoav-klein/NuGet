@@ -53,3 +53,8 @@ $ dotnet nuget push <.nupkg> -s azure -k az
 ```
 
 the `az` given to `-k` is arbitrary, any string will do.
+
+
+### Troubleshoot
+You may get authentication issues. Make sure your package name and version is not already present
+in the feed.
