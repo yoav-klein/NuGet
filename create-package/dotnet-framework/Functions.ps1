@@ -15,5 +15,5 @@ function Pack() {
 
 function Push-Package() {
        $APIKEY=$(cat apikey)
-	../../nuget.exe push -Source "py" -Apikey $APIKEY using-nuget-cli.2.4.2.nupkg
+	../../nuget.exe push -Source "azure" -Apikey $APIKEY Logger.2.4.2.nupkg
 }

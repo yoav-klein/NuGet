@@ -48,12 +48,18 @@ Use the `Pack` function for this.
 Now that we have our `.nupkg` file, which is the package, we want to distribute it to a feed.
 We have a feed in Azure Artifacts, in the `PipelinesExamples` project.
 
-Copy the `nuget.config` file from the repository root to here. It defines our feed as a source named `py` (don't ask why).
+We have a `nuget.config` file in the root of this repository. Nuget will use this file since Nuget
+uses `nuget.config` files it meets in the way up to the root directory of the drive.
+
+What you need to do is create a file named `apikey` in this directory, and put a PAT
+from Azure DevOps there.
 With this in place, you can push the package using the `Push-Package` function.
 
+NOTE: You can't push 2 packages with the same version, even if you deleted it ! So you need to always update the version
 
-## NOTE
+### NOTE
 There was some problem of retrieving the version number from the AssemblyInfo.cs file. This was fixed
 by changing something in the `nuget.exe`. See:
 https://stackoverflow.com/questions/71519166/nuget-pack-doesnt-read-assembly-version-from-visual-studio-project
  
+### NOTE
