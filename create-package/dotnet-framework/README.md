@@ -1,4 +1,4 @@
-# Using NuGet CLI
+# .NET Framework
 ---
 
 In this example, we have a .NET Framework (non-SDK-style project), so we use the `nuget.exe` CLI.
